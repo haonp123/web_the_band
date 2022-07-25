@@ -1,0 +1,52 @@
+
+/* Mobile */
+
+@media (max-width: 739px)   {
+    .has__overflow {
+        overflow: hidden;
+    }
+
+    .header__nav-list   {
+        display: block;
+        background-color: var(--black-color);
+    }
+
+    .header__nav-item   {
+        display: block;
+    }
+
+    .merch__nav {
+        display: unset;
+    }
+    
+    .header__nav-item:first-child   {
+        display: inline-block;
+    }
+
+    .header__nav-item:last-child   {
+        display: none;
+    }
+
+    .header__subnav {
+        width: 100%;
+    }
+
+    .search-btn {
+        display: none;
+    }
+    
+    .mobile__bars-btn   {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .slider__content    {
+        display: none;
+    }
+
+    .mobile__col-full    {
+        width: 100%;
+    }
+}

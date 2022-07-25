@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root   {
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+html    {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.white-color {
+    color: var(--white-color) !important;
+}
+
+
+
+.clear  {
+    clear: both;
+}
+
+.col_full {
+    width: 100%;
+}
+
+.col_2  {
+    float: left;
+    width: 50%;
+}
+
+.col_3 {
+    float: left;
+    width: 33.3333%;
+}
+
+.header {
+    height: 47px;
+    width: 100%;
+    background-color: var(--black-color);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.header__nav-list   {
+    display: inline-block;
+    list-style: none;
+}
+
+.header__nav-item   {
+    display: inline-block;
+}
+
+.merch__nav {
+    display: none;
+}
+
+.header__nav-item:last-child    {
+    position: relative;
+}
+
+.header__nav-item:last-child:hover .header__subnav  {
+    display: block;
+}
+
+.header__nav-item:hover .header__nav-link {
+    color: var(--black-color);
+    background-color: #ccc;
+}
+
+.header__nav-link   {
+    color: var(--white-color);
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+    line-height: 47px;
+    padding: 0 24px;
+    text-transform: uppercase;
+}
+
+.mobile__bars-btn,
+.search-btn {
+    font-size: 15px;
+    color: var(--white-color);
+    line-height: 47px;
+    padding: 0 24px;
+    float: right;
+}
+
+.mobile__bars-btn   {
+    display: none;
+}
+
+.mobile__bars-btn:hover   {
+    background-color: #ccc;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.search-btn:hover   {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+.header__subnav {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%);
+    display: none;
+    background-color: var(--white-color);
+}
+.header__subnav-item:hover .header__subnav-link {
+    background-color:#ccc;
+}
+
+.header__subnav-link  {
+    font-size: 15px;
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.slider {
+    margin-top: 47px;
+    padding-top: 50%;
+    position: relative;
+    background: url('/assets/images/chicago.jpg') top center / cover no-repeat;
+}
+
+.slider__content    {
+    position: absolute;
+    bottom: 0;
+    padding: 32px 0;
+    width: 100%;
+}
+
+.slider__content h3 {
+    color: var(--white-color);
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.slider__content p {
+    color: var(--white-color);
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.content__container {
+    max-width: 800px;
+    padding: 64px 16px;
+    margin: auto;
+}
+.content__heading   {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 200;
+    font-size: 30px;
+    text-align: center;
+}
+.content__sologant  {
+    margin: 15px 0;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    font-size: 15px;
+}
+.content__body   {
+    margin-bottom: 15px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.band_member-list   {
+    list-style: none;
+    padding: 32px 0;
+}
+
+.band_member-item   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.band_member-name   {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.band_member-img {
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+#tour   {
+    background-color: var(--black-color);
+}
+
+.ticket__info   {
+    background-color: var(--white-color);
+}
+
+.ticket__item   {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 16px;
+}
+
+.ticket__item-time  {
+    display: inline-block;
+    color: #757575;
+    font-size: 15px;
+}
+
+.ticket__sold-out   {
+    color: var(--white-color);
+    background-color: #f44336;
+    padding: 0 8px;
+    margin-left: 16px;
+}
+
+.ticket__item-quantity  {
+    font-size: 15px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    float: right;
+    padding: 3px 8px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.place__info {
+    padding: 32px 0;
+    margin: 0 -8px;
+}
+
+.place__item {
+    list-style: none;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.place__item-img {
+    width: 100%;
+    display: block;
+}
+
+.place__item-container {
+    padding: 0 16px;
+    background-color: var(--white-color);
+}
+
+.place__item-place   {
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.place__item-time    {
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.place__item-content {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.buyTicket-btn  {
+    margin-bottom: 16px;
+    font-size: 15px;
+    padding: 8px 16px;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.buyTicket-btn:hover    {
+    color: var(--black-color);
+    background-color: #ccc;
+}
+
+.contact__info-container {
+    padding: 32px 0;
+}
+
+.contact__info-list  {
+    list-style: none;
+}
+
+.contact__info-item  {
+    margin-bottom: 10px;
+}
+
+.contact__info-icon  {
+    width: 30px;
+    font-size: 18px;
+}
+
+.contact__info-text  {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.contact__form-list  {
+
+}
+
+.contact__form-container {
+    margin: 0 -8px 8px;
+}
+
+.contact__form-container .col_2 {
+    padding: 0 8px;
+}
+
+.contact__form-item  {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+.send-btn   {
+    font-size: 15px;
+    padding: 10px 15px;
+    float: right;
+    margin: 16px 0;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+footer  {
+    padding: 64px 0;
+}
+
+.footer__icon-list   {
+    text-align: center;
+}
+
+.footer__icon    {
+    font-size: 24px;
+    opacity: 0.6;
+}
+
+.footer__icon:hover {
+    opacity: 0.3;
+}
+
+.footer__end    {
+    margin: 15px 0;
+    text-align:center;
+    opacity: 0.6;
+
+}
+
+.footer__end p  {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.footer__end a  {
+    color: var(--black-color);
+    opacity: 0.6;
+}
+
+.modal  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal__container   {
+    width: 900px;
+    max-width: calc(100% - 16px);
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal__container-header {
+    padding: 32px 0;
+    background-color: #009688;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.modal__header-heading   {
+    margin: 10px 0;
+    display:flex;
+    align-items: center;
+}
+
+.modal__header-icon  {
+    font-size: 24px;
+    color: var(--white-color);
+    margin-right: 16px;
+}
+
+.modal__header-text  {
+    font-size: 24px;
+    color: var(--white-color);
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+
+.close__btn-main    {
+    position: absolute;
+    top: 0;
+    right:0;
+    font-size: 24px;
+    padding: 8px 16px;
+    color: var(--white-color);
+}
+
+.close__btn-main:hover,
+.pay-btn:hover,
+.close__btn:hover  {
+    cursor: pointer;
+    color: var(--black-color);
+    background-color: #ccc;
+}
+
+.modal__container-body   {
+    background-color: var(--white-color);
+    padding: 0 16px;
+}
+
+.modal__form {
+
+}
+
+.modal__label   {
+    padding: 15px 0;
+    font-size: 15px;
+    display: block;
+}
+
+.modal__label p {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.modal__form input  {
+    font-size: 15px;
+    padding: 8px;
+    width: 100%;
+}
+
+.pay-btn    {
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    color: var(--white-color);
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #009688;
+}
+
+.close__btn  {
+    color: var(--white-color);
+    background-color: #f44336;
+    padding: 8px 16px;
+    margin: 16px 0;
+    border: none;
+}
+
+.help-btn   {
+    float: right;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.help-btn a {
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from    {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to  {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
