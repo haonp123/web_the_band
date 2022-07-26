@@ -27,20 +27,22 @@ const sliderInfo = [
     }
 ];
 
-//Change slider every 5s
-var i = 1;
+//Random a slider:
+var index = Math.floor(Math.random()*sliderInfo.length);
 
-setInterval(function()  {
-    slider.style.background = `url(${sliderInfo[i].path}) top center / cover no-repeat`;
-    sliderHeading.innerText = sliderInfo[i].heading;
-    sliderDescription.innerText = sliderInfo[i].description;
+function updateSlide() {
+    slider.style.background = `url(${sliderInfo[index].path}) top center / cover no-repeat`;
+    sliderHeading.innerText = sliderInfo[index].heading;
+    sliderDescription.innerText = sliderInfo[index].description;
 
-    if(i === sliderInfo.length - 1) {
-        i = 0;
-    } else  {
-        ++i;
+    index++;
+    if(index == sliderInfo.length) {
+        index = 0;
     }
-}, 5000);
+}
+
+updateSlide();
+setInterval(updateSlide, 5000);
 
 //Click menu button:
 menuBtn.onclick = function() {
