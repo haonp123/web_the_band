@@ -11,17 +11,17 @@ const sliderDescription = $('.slider__description');
 
 const sliderInfo = [
     {
-        path: '/assets/images/chicago.jpg',
+        path: './assets/images/chicago.jpg',
         heading: 'Chicago',
         description: 'Thank you, Chicago - A night we won\'t forget'
     },
     {
-        path: '/assets/images/la.jpg',
+        path: './assets/images/la.jpg',
         heading: 'Los Angeles',
         description: 'We had the best time playing at Venice Beach!'
     },
     {
-        path: '/assets/images/ny.jpg',
+        path: './assets/images/ny.jpg',
         heading: 'New York',
         description: 'The atmosphere in New York is lorem ipsum.'
     }
